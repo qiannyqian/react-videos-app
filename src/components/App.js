@@ -2,7 +2,7 @@ import React from 'react';
 import SearchBar from './SearchBar';
 import youtube from '../apis/youtube';
 
-const KEY = 'AIzaSyAa-M2M9hbbEZLvuu20hqeISW7IBhSxXzY';
+const API_KEY = `${process.env.REACT_APP_API_KEY_YT}`;
 
 class App extends React.Component {
   state = { videos: [] };
@@ -13,7 +13,7 @@ class App extends React.Component {
         q: term,
         part: 'snippet',
         maxResults: 5,
-        key: KEY,
+        key: API_KEY,
       },
     });
 
